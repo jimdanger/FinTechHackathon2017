@@ -12,6 +12,10 @@
 		8B0361CE1E4F8DB300FC57B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0361CC1E4F8DB300FC57B4 /* Main.storyboard */; };
 		8B0361D01E4F8DB300FC57B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0361CF1E4F8DB300FC57B4 /* Assets.xcassets */; };
 		8B0361D31E4F8DB300FC57B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0361D11E4F8DB300FC57B4 /* LaunchScreen.storyboard */; };
+		8B444EA71E4FB5630084BECB /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B444EA61E4FB5630084BECB /* CustomObject.m */; };
+		8B444EAB1E4FBB520084BECB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B444EAA1E4FBB520084BECB /* Session.swift */; };
+		8BD1FED21E4F953300B08D01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BD1FED11E4F953300B08D01 /* GoogleService-Info.plist */; };
+		8FE770855116B912B9138F43 /* Pods_FacePay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856944C703A103833E7A627 /* Pods_FacePay.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,15 @@
 		8B0361CF1E4F8DB300FC57B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B0361D21E4F8DB300FC57B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B0361D41E4F8DB300FC57B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B444EA41E4FAC8A0084BECB /* FacePay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FacePay.entitlements; sourceTree = "<group>"; };
+		8B444EA51E4FB5630084BECB /* FacePay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FacePay-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B444EA61E4FB5630084BECB /* CustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomObject.m; sourceTree = "<group>"; };
+		8B444EA81E4FB5A20084BECB /* CustomObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomObject.h; sourceTree = "<group>"; };
+		8B444EAA1E4FBB520084BECB /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		8BD1FED11E4F953300B08D01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F87A30144CA41F7CABB3CE8 /* Pods-FacePay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacePay/Pods-FacePay.debug.xcconfig"; sourceTree = "<group>"; };
+		A802DCDED2FE01914254F133 /* Pods-FacePay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePay.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacePay/Pods-FacePay.release.xcconfig"; sourceTree = "<group>"; };
+		F856944C703A103833E7A627 /* Pods_FacePay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacePay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +42,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE770855116B912B9138F43 /* Pods_FacePay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70259BE3FFED159F5F27B12C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F856944C703A103833E7A627 /* Pods_FacePay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8B0361BC1E4F8DB300FC57B4 = {
 			isa = PBXGroup;
 			children = (
 				8B0361C71E4F8DB300FC57B4 /* FacePay */,
 				8B0361C61E4F8DB300FC57B4 /* Products */,
+				C177E90078FB824AA999E3D6 /* Pods */,
+				70259BE3FFED159F5F27B12C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +78,37 @@
 		8B0361C71E4F8DB300FC57B4 /* FacePay */ = {
 			isa = PBXGroup;
 			children = (
+				8B444EA41E4FAC8A0084BECB /* FacePay.entitlements */,
 				8B0361C81E4F8DB300FC57B4 /* AppDelegate.swift */,
+				8B444EAA1E4FBB520084BECB /* Session.swift */,
 				8B0361CA1E4F8DB300FC57B4 /* ViewController.swift */,
+				8B444EA91E4FB7330084BECB /* ObjectiveCStuff */,
 				8B0361CC1E4F8DB300FC57B4 /* Main.storyboard */,
 				8B0361CF1E4F8DB300FC57B4 /* Assets.xcassets */,
 				8B0361D11E4F8DB300FC57B4 /* LaunchScreen.storyboard */,
 				8B0361D41E4F8DB300FC57B4 /* Info.plist */,
+				8BD1FED11E4F953300B08D01 /* GoogleService-Info.plist */,
+				8B444EA51E4FB5630084BECB /* FacePay-Bridging-Header.h */,
 			);
 			path = FacePay;
+			sourceTree = "<group>";
+		};
+		8B444EA91E4FB7330084BECB /* ObjectiveCStuff */ = {
+			isa = PBXGroup;
+			children = (
+				8B444EA81E4FB5A20084BECB /* CustomObject.h */,
+				8B444EA61E4FB5630084BECB /* CustomObject.m */,
+			);
+			name = ObjectiveCStuff;
+			sourceTree = "<group>";
+		};
+		C177E90078FB824AA999E3D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F87A30144CA41F7CABB3CE8 /* Pods-FacePay.debug.xcconfig */,
+				A802DCDED2FE01914254F133 /* Pods-FacePay.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +118,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B0361D71E4F8DB300FC57B4 /* Build configuration list for PBXNativeTarget "FacePay" */;
 			buildPhases = (
+				E9F45C208706639719474B2B /* [CP] Check Pods Manifest.lock */,
 				8B0361C11E4F8DB300FC57B4 /* Sources */,
 				8B0361C21E4F8DB300FC57B4 /* Frameworks */,
 				8B0361C31E4F8DB300FC57B4 /* Resources */,
+				784D028BC6C56A651A57B300 /* [CP] Embed Pods Frameworks */,
+				7D0F39E6E6A4B24E165A1C4D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,7 +147,13 @@
 					8B0361C41E4F8DB300FC57B4 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 5MFLP3AQ7C;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -127,17 +183,68 @@
 				8B0361D31E4F8DB300FC57B4 /* LaunchScreen.storyboard in Resources */,
 				8B0361D01E4F8DB300FC57B4 /* Assets.xcassets in Resources */,
 				8B0361CE1E4F8DB300FC57B4 /* Main.storyboard in Resources */,
+				8BD1FED21E4F953300B08D01 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		784D028BC6C56A651A57B300 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacePay/Pods-FacePay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D0F39E6E6A4B24E165A1C4D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FacePay/Pods-FacePay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9F45C208706639719474B2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B0361C11E4F8DB300FC57B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B444EAB1E4FBB520084BECB /* Session.swift in Sources */,
 				8B0361CB1E4F8DB300FC57B4 /* ViewController.swift in Sources */,
+				8B444EA71E4FB5630084BECB /* CustomObject.m in Sources */,
 				8B0361C91E4F8DB300FC57B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +297,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "~/Documents/FacebookSDK ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -259,26 +367,37 @@
 		};
 		8B0361D81E4F8DB300FC57B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F87A30144CA41F7CABB3CE8 /* Pods-FacePay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FacePay/FacePay.entitlements;
 				DEVELOPMENT_TEAM = 5MFLP3AQ7C;
 				INFOPLIST_FILE = FacePay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-jimdanger.FacePay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FacePay/FacePay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8B0361D91E4F8DB300FC57B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A802DCDED2FE01914254F133 /* Pods-FacePay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FacePay/FacePay.entitlements;
 				DEVELOPMENT_TEAM = 5MFLP3AQ7C;
 				INFOPLIST_FILE = FacePay/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-jimdanger.FacePay";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FacePay/FacePay-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +421,7 @@
 				8B0361D91E4F8DB300FC57B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
