@@ -21,8 +21,11 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("viewDidLoad")
+<<<<<<< HEAD
         
         CardIOUtilities.preload()
+=======
+>>>>>>> saveSomethingToDatabase
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +33,7 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+<<<<<<< HEAD
 
     @IBAction func cardIOScanner(_ sender: Any) {
         let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
@@ -46,6 +50,8 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
     }
 
 
+=======
+>>>>>>> saveSomethingToDatabase
     // MARK: - Buttons
     @IBAction func testSaveToDataBaseButtonPressed(_ sender: Any) {
         print("testSaveToDataBaseButtonPressed")
@@ -90,6 +96,8 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
 
 
     func loginToFireBase(credential: FIRAuthCredential) {
+
+
         FIRAuth.auth()?.signIn(with: credential) { (user, error) in
 
             if let error = error {
