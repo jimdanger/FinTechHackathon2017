@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,8 +32,8 @@
                                     <action selector="loginWithFBButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlW-Rp-LVw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znj-Dj-huz">
-                                <rect key="frame" x="160" y="164" width="90" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wink  ;)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znj-Dj-huz">
+                                <rect key="frame" x="160" y="164" width="90" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
@@ -53,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="66.11694152923539"/>
         </scene>
-        <!--Cards-->
+        <!--Digital Wallet-->
         <scene sceneID="7ys-fu-n5i">
             <objects>
                 <viewController id="BBf-5N-GfA" customClass="CardListVC" customModule="FacePay" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,22 +66,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94T-P1-M1h">
-                                <rect key="frame" x="140" y="229" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94T-P1-M1h">
+                                <rect key="frame" x="46" y="229" width="283" height="30"/>
                                 <state key="normal" title="Add a card? "/>
                                 <connections>
                                     <action selector="addFirstCardButton:" destination="BBf-5N-GfA" eventType="touchUpInside" id="Hdg-Fr-4Xt"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvK-KT-1Ja">
+                                <rect key="frame" x="26" y="124" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UvK-KT-1Ja" firstAttribute="top" secondItem="uUO-ly-2pG" secondAttribute="bottom" constant="60" id="09L-g1-xdc"/>
+                            <constraint firstItem="94T-P1-M1h" firstAttribute="top" secondItem="uUO-ly-2pG" secondAttribute="bottom" constant="165" id="0y6-kp-kje"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UvK-KT-1Ja" secondAttribute="trailing" constant="10" id="BYQ-gD-FDb"/>
+                            <constraint firstItem="94T-P1-M1h" firstAttribute="leading" secondItem="TTk-h9-GR9" secondAttribute="leadingMargin" constant="30" id="CJN-Cs-q16"/>
+                            <constraint firstItem="UvK-KT-1Ja" firstAttribute="leading" secondItem="TTk-h9-GR9" secondAttribute="leadingMargin" constant="10" id="nSO-WT-rfa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="94T-P1-M1h" secondAttribute="trailing" constant="30" id="qXT-bb-hes"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cards" id="FPb-K4-4Fz"/>
+                    <navigationItem key="navigationItem" title="Digital Wallet" id="FPb-K4-4Fz"/>
+                    <connections>
+                        <outlet property="addCardButton" destination="94T-P1-M1h" id="WRY-7D-EZh"/>
+                        <outlet property="cardNumberLabel" destination="UvK-KT-1Ja" id="oNW-uS-nNR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aST-5z-9TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2905" y="-567"/>
+            <point key="canvasLocation" x="2904.8000000000002" y="-567.16641679160421"/>
         </scene>
         <!--MenuVC-->
         <scene sceneID="Fqy-bW-DpH">
@@ -95,25 +113,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otN-6J-KO8">
-                                <rect key="frame" x="51" y="134" width="94" height="30"/>
+                                <rect key="frame" x="51" y="136" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Digital Wallet "/>
+                                <state key="normal" title="Manage Your Digital Wallet "/>
                                 <connections>
                                     <action selector="WalletPressed:" destination="u5n-Hk-GM7" eventType="touchUpInside" id="iYg-xR-kor"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZR-Dt-Vsd">
-                                <rect key="frame" x="51" y="318" width="48" height="30"/>
+                                <rect key="frame" x="55" y="318" width="284" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Photos"/>
+                                <state key="normal" title="Add photos to optimize your Wink profile."/>
                                 <connections>
                                     <action selector="photosPressed:" destination="u5n-Hk-GM7" eventType="touchUpInside" id="scG-ZV-R9v"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GV2-z2-yea">
-                                <rect key="frame" x="51" y="521" width="88" height="30"/>
+                                <rect key="frame" x="64" y="520" width="247" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Transactions"/>
+                                <state key="normal" title="View recent transactions from TSYS"/>
                                 <connections>
                                     <action selector="transactionsPressed:" destination="u5n-Hk-GM7" eventType="touchUpInside" id="EgP-8h-cAQ"/>
                                 </connections>
@@ -124,15 +142,15 @@
                     <navigationItem key="navigationItem" id="ovW-eN-cJW"/>
                     <connections>
                         <segue destination="eBq-zf-W4o" kind="show" identifier="photo" id="QeR-Kt-gM7"/>
-                        <segue destination="qZe-uE-UrC" kind="show" identifier="transactions" id="cGQ-IV-jcm"/>
                         <segue destination="BBf-5N-GfA" kind="show" identifier="card" id="uVO-RS-jw0"/>
+                        <segue destination="qYi-Ie-H2W" kind="show" identifier="tsys" id="YtU-F4-QAd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0P1-kH-FhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2002" y="66"/>
         </scene>
-        <!--Add PhotosVC-->
+        <!--Manage Photos-->
         <scene sceneID="Y4j-iJ-TCJ">
             <objects>
                 <viewController id="eBq-zf-W4o" customClass="AddPhotosVC" customModule="FacePay" customModuleProvider="target" sceneMemberID="viewController">
@@ -143,39 +161,57 @@
                     <view key="view" contentMode="scaleToFill" id="xUZ-bz-QsO" customClass="ddpho">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2q-FM-nmJ">
-                                <rect key="frame" x="84" y="118" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Manage Photos" id="8eW-H3-JIx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2r-Nu-pVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2905" y="239"/>
         </scene>
-        <!--TransactionsVC-->
-        <scene sceneID="cjI-x6-NjY">
+        <!--Recent Transactions-->
+        <scene sceneID="8Kv-eZ-kt9">
             <objects>
-                <viewController id="qZe-uE-UrC" customClass="TransactionsVC" customModule="FacePay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qYi-Ie-H2W" customClass="TSYSViewController" customModule="FacePay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q9L-a4-q82"/>
-                        <viewControllerLayoutGuide type="bottom" id="LgL-Vc-XV7"/>
+                        <viewControllerLayoutGuide type="top" id="H3P-2H-YR4"/>
+                        <viewControllerLayoutGuide type="bottom" id="tnd-aD-E0m"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gmb-ys-yGm" customClass="TWTRLogInButton">
+                    <view key="view" contentMode="scaleToFill" id="uSk-xc-Vm5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAJ-lX-Z3D">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TSYSCell" id="XuS-M7-Syh" customClass="TSYSCell" customModule="FacePay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XuS-M7-Syh" id="QlL-td-mMk">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GAJ-lX-Z3D" secondAttribute="trailing" constant="-16" id="B1y-96-eep"/>
+                            <constraint firstItem="tnd-aD-E0m" firstAttribute="top" secondItem="GAJ-lX-Z3D" secondAttribute="bottom" id="Obe-Uw-fk0"/>
+                            <constraint firstItem="GAJ-lX-Z3D" firstAttribute="leading" secondItem="uSk-xc-Vm5" secondAttribute="leadingMargin" constant="-16" id="TFZ-qv-fEx"/>
+                            <constraint firstItem="GAJ-lX-Z3D" firstAttribute="top" secondItem="H3P-2H-YR4" secondAttribute="bottom" constant="8" id="iFh-Ya-KdY"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Recent Transactions" id="mns-Zb-7zz"/>
+                    <connections>
+                        <outlet property="tableView" destination="GAJ-lX-Z3D" id="T5U-lk-a5k"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ipO-Fu-oiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9b-sZ-bVT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2905" y="1040"/>
+            <point key="canvasLocation" x="2904.8000000000002" y="930.58470764617698"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DB3-m2-6jE">

@@ -16,11 +16,13 @@
 		8B444EA71E4FB5630084BECB /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B444EA61E4FB5630084BECB /* CustomObject.m */; };
 		8B444EAB1E4FBB520084BECB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B444EAA1E4FBB520084BECB /* Session.swift */; };
 		8B444EAD1E4FBEFC0084BECB /* FireBaseObjectSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B444EAC1E4FBEFC0084BECB /* FireBaseObjectSaver.swift */; };
+		8B49B5D51E5057A4008C8D17 /* WorldPayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B49B5D41E5057A4008C8D17 /* WorldPayManager.swift */; };
 		8B5602231E50168B0020F708 /* CardListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B5602221E50168B0020F708 /* CardListVC.swift */; };
 		8B70BB971E504E3900542DD4 /* AddPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70BB961E504E3900542DD4 /* AddPhotosVC.swift */; };
 		8B70BB991E504EBE00542DD4 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70BB981E504EBE00542DD4 /* MenuVC.swift */; };
-		8B70BB9B1E50526700542DD4 /* TransactionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70BB9A1E50526700542DD4 /* TransactionsVC.swift */; };
 		8BD1FED21E4F953300B08D01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BD1FED11E4F953300B08D01 /* GoogleService-Info.plist */; };
+		8BD3E0C61E50B6D1008E0260 /* TSYSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3E0C51E50B6D1008E0260 /* TSYSViewController.swift */; };
+		8BD3E0C81E50B8EB008E0260 /* TSYSCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD3E0C71E50B8EB008E0260 /* TSYSCell.swift */; };
 		8FE770855116B912B9138F43 /* Pods_FacePay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856944C703A103833E7A627 /* Pods_FacePay.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,11 +41,13 @@
 		8B444EA81E4FB5A20084BECB /* CustomObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomObject.h; sourceTree = "<group>"; };
 		8B444EAA1E4FBB520084BECB /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		8B444EAC1E4FBEFC0084BECB /* FireBaseObjectSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseObjectSaver.swift; sourceTree = "<group>"; };
+		8B49B5D41E5057A4008C8D17 /* WorldPayManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldPayManager.swift; sourceTree = "<group>"; };
 		8B5602221E50168B0020F708 /* CardListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardListVC.swift; sourceTree = "<group>"; };
 		8B70BB961E504E3900542DD4 /* AddPhotosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotosVC.swift; sourceTree = "<group>"; };
 		8B70BB981E504EBE00542DD4 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
-		8B70BB9A1E50526700542DD4 /* TransactionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsVC.swift; sourceTree = "<group>"; };
 		8BD1FED11E4F953300B08D01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BD3E0C51E50B6D1008E0260 /* TSYSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSYSViewController.swift; sourceTree = "<group>"; };
+		8BD3E0C71E50B8EB008E0260 /* TSYSCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSYSCell.swift; sourceTree = "<group>"; };
 		8F87A30144CA41F7CABB3CE8 /* Pods-FacePay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacePay/Pods-FacePay.debug.xcconfig"; sourceTree = "<group>"; };
 		A802DCDED2FE01914254F133 /* Pods-FacePay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePay.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacePay/Pods-FacePay.release.xcconfig"; sourceTree = "<group>"; };
 		F856944C703A103833E7A627 /* Pods_FacePay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacePay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +99,7 @@
 				8B444EAA1E4FBB520084BECB /* Session.swift */,
 				8B444EAC1E4FBEFC0084BECB /* FireBaseObjectSaver.swift */,
 				8B13545C1E50288B00DFDCFB /* RestApiManager.swift */,
+				8B49B5D41E5057A4008C8D17 /* WorldPayManager.swift */,
 				8B5602241E50169A0020F708 /* ViewControllers */,
 				8B444EA91E4FB7330084BECB /* ObjectiveCStuff */,
 				8B0361CC1E4F8DB300FC57B4 /* Main.storyboard */,
@@ -122,8 +127,9 @@
 				8B0361CA1E4F8DB300FC57B4 /* ViewController.swift */,
 				8B5602221E50168B0020F708 /* CardListVC.swift */,
 				8B70BB961E504E3900542DD4 /* AddPhotosVC.swift */,
-				8B70BB9A1E50526700542DD4 /* TransactionsVC.swift */,
 				8B70BB981E504EBE00542DD4 /* MenuVC.swift */,
+				8BD3E0C51E50B6D1008E0260 /* TSYSViewController.swift */,
+				8BD3E0C71E50B8EB008E0260 /* TSYSCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -270,14 +276,16 @@
 			files = (
 				8B444EAB1E4FBB520084BECB /* Session.swift in Sources */,
 				8B0361CB1E4F8DB300FC57B4 /* ViewController.swift in Sources */,
+				8BD3E0C61E50B6D1008E0260 /* TSYSViewController.swift in Sources */,
 				8B5602231E50168B0020F708 /* CardListVC.swift in Sources */,
+				8BD3E0C81E50B8EB008E0260 /* TSYSCell.swift in Sources */,
 				8B70BB971E504E3900542DD4 /* AddPhotosVC.swift in Sources */,
+				8B49B5D51E5057A4008C8D17 /* WorldPayManager.swift in Sources */,
 				8B444EA71E4FB5630084BECB /* CustomObject.m in Sources */,
 				8B70BB991E504EBE00542DD4 /* MenuVC.swift in Sources */,
 				8B444EAD1E4FBEFC0084BECB /* FireBaseObjectSaver.swift in Sources */,
 				8B13545D1E50288B00DFDCFB /* RestApiManager.swift in Sources */,
 				8B0361C91E4F8DB300FC57B4 /* AppDelegate.swift in Sources */,
-				8B70BB9B1E50526700542DD4 /* TransactionsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,9 @@ class CardListVC: UIViewController, CardIOPaymentViewControllerDelegate {
     var cardIOVC: CardIOPaymentViewController?
     var cardInfos: [CardIOCreditCardInfo]?
 
+    @IBOutlet weak var cardNumberLabel: UILabel!
+    @IBOutlet weak var addCardButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
          cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
@@ -57,9 +60,31 @@ class CardListVC: UIViewController, CardIOPaymentViewControllerDelegate {
 
         // add card to the VC in this array:
         cardInfos?.append(cardInfo)
+        cardNumberLabel.isHidden = false
+
+        var cardDescription = cardInfo.description
+        let index = cardDescription.index(cardDescription.startIndex, offsetBy: 1)
+        cardNumberLabel.text = cardDescription.substring(from: index)  // to remove the opening " { "
+
+        addCardButton.setTitle("Add another card", for: .normal)
+
+
 
         // upload the card to WorldPay
+        Session.instance.cardNumber = cardInfo.cardNumber
+        Session.instance.expirationDate = "\(cardInfo.expiryMonth)/\(cardInfo.expiryYear)"
+
         saveCardToWorldPayVault()
+
+        // Alert Success of Vault Upload:
+        let actionSheetController: UIAlertController = UIAlertController(title: "Card Added To Vault!  ; )", message: "You may now use Wink at accepting merchants.", preferredStyle: .alert)
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Okay", style: .cancel) { action -> Void in
+            //Just dismiss the action sheet
+        }
+        actionSheetController.addAction(cancelAction)
+        self.present(actionSheetController, animated: true, completion: nil)
+        
+
 
     }
 
@@ -67,6 +92,7 @@ class CardListVC: UIViewController, CardIOPaymentViewControllerDelegate {
     func saveCardToWorldPayVault(){
         print("saveCardToWorldPayValut")
 
+        WorldPayManager.instance.saveCardAndGetToken()
      
     }
 

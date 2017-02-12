@@ -24,12 +24,17 @@ class ViewController: UIViewController {
         print("viewDidLoad")
         
         CardIOUtilities.preload()
-        RestApiManager.instance.microsoftCreatePerson()
+
+        WorldPayManager.instance.saveCardAndGetToken()
+
+
+
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-
-
-
-
     }
 
     override func didReceiveMemoryWarning() {

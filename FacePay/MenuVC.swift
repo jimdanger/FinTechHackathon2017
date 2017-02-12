@@ -52,7 +52,7 @@ class MenuVC: UIViewController {
 
     @IBAction func transactionsPressed(_ sender: Any) {
         print("transactionsPressed")
-        performSegue(withIdentifier: "transactions", sender: nil)
+        performSegue(withIdentifier: "tsys", sender: nil)
 
     }
 

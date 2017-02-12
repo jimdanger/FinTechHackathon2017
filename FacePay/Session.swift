@@ -18,4 +18,9 @@ public class Session {
     var user: FIRUser? // Firebase user
     var personIdFromMicrosoft: String?
 
+    // card stuff:
+    var cardNumber: String?
+    var expirationDate: String?
+    var worldPaytoken: String?
+
 }
