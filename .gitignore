@@ -1,1 +1,5 @@
 Pie/Pods/*
+/Podfile.lock
+/Podfile.lock.orig
+/Podfile.orig
+/Pods
