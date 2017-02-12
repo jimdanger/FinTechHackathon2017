@@ -18,6 +18,4 @@ public class Session {
     var user: FIRUser? // Firebase user
     var personIdFromMicrosoft: String?
 
-
-    
 }

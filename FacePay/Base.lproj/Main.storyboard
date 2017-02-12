@@ -21,27 +21,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGv-Za-szq">
-                                <rect key="frame" x="30" y="70" width="141" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login with Facebook"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGv-Za-szq">
+                                <rect key="frame" x="88" y="396" width="199" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="Wls-nz-rb9"/>
+                                </constraints>
+                                <state key="normal" title="Login with Facebook" image="facebook-login-buttoncropped"/>
                                 <connections>
                                     <action selector="loginWithFBButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vlW-Rp-LVw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehd-I9-lEu">
-                                <rect key="frame" x="15" y="194" width="202" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znj-Dj-huz">
+                                <rect key="frame" x="160" y="164" width="90" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="TestSaveToDB"/>
-                                <connections>
-                                    <action selector="testSaveToDataBaseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7YE-fs-Tar"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oGv-Za-szq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CnO-Oy-nJf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oGv-Za-szq" secondAttribute="bottom" constant="232" id="wt5-6e-ZGX"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <segue destination="Q55-05-hiO" kind="show" identifier="next" id="TWp-U4-wgC"/>
+                        <segue destination="xrg-om-3vW" kind="show" identifier="next" id="KH0-WK-i42"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,25 +80,123 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aST-5z-9TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="65.217391304347828"/>
+            <point key="canvasLocation" x="2905" y="-567"/>
+        </scene>
+        <!--MenuVC-->
+        <scene sceneID="Fqy-bW-DpH">
+            <objects>
+                <viewController id="u5n-Hk-GM7" customClass="MenuVC" customModule="FacePay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bed-vd-Vji"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bei-RF-xf3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="anW-yB-fQb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otN-6J-KO8">
+                                <rect key="frame" x="51" y="134" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Digital Wallet "/>
+                                <connections>
+                                    <action selector="WalletPressed:" destination="u5n-Hk-GM7" eventType="touchUpInside" id="iYg-xR-kor"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZR-Dt-Vsd">
+                                <rect key="frame" x="51" y="318" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Photos"/>
+                                <connections>
+                                    <action selector="photosPressed:" destination="u5n-Hk-GM7" eventType="touchUpInside" id="scG-ZV-R9v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GV2-z2-yea">
+                                <rect key="frame" x="51" y="521" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Transactions"/>
+                                <connections>
+                                    <action selector="transactionsPressed:" destination="u5n-Hk-GM7" eventType="touchUpInside" id="EgP-8h-cAQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ovW-eN-cJW"/>
+                    <connections>
+                        <segue destination="eBq-zf-W4o" kind="show" identifier="photo" id="QeR-Kt-gM7"/>
+                        <segue destination="qZe-uE-UrC" kind="show" identifier="transactions" id="cGQ-IV-jcm"/>
+                        <segue destination="BBf-5N-GfA" kind="show" identifier="card" id="uVO-RS-jw0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0P1-kH-FhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2002" y="66"/>
+        </scene>
+        <!--Add PhotosVC-->
+        <scene sceneID="Y4j-iJ-TCJ">
+            <objects>
+                <viewController id="eBq-zf-W4o" customClass="AddPhotosVC" customModule="FacePay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hj1-ek-Ko5"/>
+                        <viewControllerLayoutGuide type="bottom" id="YMc-0c-Dzf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xUZ-bz-QsO" customClass="ddpho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2q-FM-nmJ">
+                                <rect key="frame" x="84" y="118" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D2r-Nu-pVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905" y="239"/>
+        </scene>
+        <!--TransactionsVC-->
+        <scene sceneID="cjI-x6-NjY">
+            <objects>
+                <viewController id="qZe-uE-UrC" customClass="TransactionsVC" customModule="FacePay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q9L-a4-q82"/>
+                        <viewControllerLayoutGuide type="bottom" id="LgL-Vc-XV7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gmb-ys-yGm" customClass="TWTRLogInButton">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipO-Fu-oiB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905" y="1040"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="LO3-jw-dIZ">
+        <scene sceneID="DB3-m2-6jE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q55-05-hiO" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xrg-om-3vW" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="czv-hI-ruf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vs7-gx-fEw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BBf-5N-GfA" kind="relationship" relationship="rootViewController" id="eu8-Oh-wC3"/>
+                        <segue destination="u5n-Hk-GM7" kind="relationship" relationship="rootViewController" id="4od-RP-oDJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zao-fT-to4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pix-o1-eca" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.79999999999995" y="65.217391304347828"/>
+            <point key="canvasLocation" x="953" y="67"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="facebook-login-buttoncropped" width="196" height="39"/>
+    </resources>
 </document>

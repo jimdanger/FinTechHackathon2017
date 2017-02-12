@@ -132,6 +132,12 @@ public class RestApiManager {
             // do nothing
         }
     }
+
+    func microsoftAddAPersonFace() {
+
+        // omitting from demo. 
+
+    }
 }
 
 
