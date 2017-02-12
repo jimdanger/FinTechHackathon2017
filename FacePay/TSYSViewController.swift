@@ -21,6 +21,7 @@ class TSYSViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
 
+        getTSYSData()
 
     }
 
@@ -52,12 +53,17 @@ class TSYSViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         //cell.nameLabel.text = categories[indexPath.row].name
 
-        
 
         return cell
     }
-    
-    // MARK: -  UITableViewDataSource Methods
+
+
+    // MARK: - APIs
+    func getTSYSData() {
+
+        
+    }
+
 
 
 }
