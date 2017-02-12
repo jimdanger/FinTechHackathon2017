@@ -13,7 +13,7 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import FirebaseFacebookAuthUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
 
     let objcCode = CustomObject() 
 
@@ -21,7 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("viewDidLoad")
-
+        
+        CardIOUtilities.preload()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +30,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+
+    @IBAction func cardIOScanner(_ sender: Any) {
+        let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
+        cardIOVC?.modalPresentationStyle = .formSheet
+        present(cardIOVC!, animated: true, completion: nil)
+    }
+    
+    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
+        paymentViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
+
+    }
 
 
     // MARK: - Buttons
