@@ -10,6 +10,8 @@ target 'FacePay' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'FirebaseUI', '~> 2.0' 
+pod 'Firebase/Storage'
+pod 'Firebase/Database'
 
 platform :ios, '8.0'
 use_frameworks!

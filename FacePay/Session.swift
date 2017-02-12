@@ -13,7 +13,6 @@ public class Session {
 
     /// I'm just putting all kinds of info in this global singelton. Probbaly bad practice but hackathon so whatever.
 
-
     open static var instance: Session  = Session()
     
     var user: FIRUser? // Firebase user

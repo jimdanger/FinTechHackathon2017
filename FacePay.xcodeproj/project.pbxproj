@@ -14,6 +14,7 @@
 		8B0361D31E4F8DB300FC57B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0361D11E4F8DB300FC57B4 /* LaunchScreen.storyboard */; };
 		8B444EA71E4FB5630084BECB /* CustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B444EA61E4FB5630084BECB /* CustomObject.m */; };
 		8B444EAB1E4FBB520084BECB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B444EAA1E4FBB520084BECB /* Session.swift */; };
+		8B444EAD1E4FBEFC0084BECB /* FireBaseObjectSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B444EAC1E4FBEFC0084BECB /* FireBaseObjectSaver.swift */; };
 		8BD1FED21E4F953300B08D01 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BD1FED11E4F953300B08D01 /* GoogleService-Info.plist */; };
 		8FE770855116B912B9138F43 /* Pods_FacePay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F856944C703A103833E7A627 /* Pods_FacePay.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		8B444EA61E4FB5630084BECB /* CustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomObject.m; sourceTree = "<group>"; };
 		8B444EA81E4FB5A20084BECB /* CustomObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomObject.h; sourceTree = "<group>"; };
 		8B444EAA1E4FBB520084BECB /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		8B444EAC1E4FBEFC0084BECB /* FireBaseObjectSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseObjectSaver.swift; sourceTree = "<group>"; };
 		8BD1FED11E4F953300B08D01 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F87A30144CA41F7CABB3CE8 /* Pods-FacePay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FacePay/Pods-FacePay.debug.xcconfig"; sourceTree = "<group>"; };
 		A802DCDED2FE01914254F133 /* Pods-FacePay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacePay.release.xcconfig"; path = "Pods/Target Support Files/Pods-FacePay/Pods-FacePay.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				8B444EA41E4FAC8A0084BECB /* FacePay.entitlements */,
 				8B0361C81E4F8DB300FC57B4 /* AppDelegate.swift */,
 				8B444EAA1E4FBB520084BECB /* Session.swift */,
+				8B444EAC1E4FBEFC0084BECB /* FireBaseObjectSaver.swift */,
 				8B0361CA1E4F8DB300FC57B4 /* ViewController.swift */,
 				8B444EA91E4FB7330084BECB /* ObjectiveCStuff */,
 				8B0361CC1E4F8DB300FC57B4 /* Main.storyboard */,
@@ -245,6 +248,7 @@
 				8B444EAB1E4FBB520084BECB /* Session.swift in Sources */,
 				8B0361CB1E4F8DB300FC57B4 /* ViewController.swift in Sources */,
 				8B444EA71E4FB5630084BECB /* CustomObject.m in Sources */,
+				8B444EAD1E4FBEFC0084BECB /* FireBaseObjectSaver.swift in Sources */,
 				8B0361C91E4F8DB300FC57B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

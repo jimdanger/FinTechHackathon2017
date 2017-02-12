@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("viewDidLoad")
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,12 +28,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-
     // MARK: - Buttons
     @IBAction func testSaveToDataBaseButtonPressed(_ sender: Any) {
         print("testSaveToDataBaseButtonPressed")
         objcCode.someMethod() // turns out I'm not using this anymore, but if we need to use objective C code, we can throw it in here and call it from a swift file.
+
+        FireBaseObjectSaver.instance.saveCurrentUserToDataBase()
+
     }
 
     @IBAction func loginWithFBButtonPressed(_ sender: Any) {
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     func loginWithFacebook() {
         let loginManager = FBSDKLoginManager()
 
-        let permissions: [String] = ["email", "public_profile", "user_friends"]
+        let permissions: [String] = ["email", "public_profile", "user_friends" /*, "user_photos"*/] // user_photos requires review from FB
 
         loginManager.logIn(withReadPermissions: permissions, from: self, handler: { (result, error) in
 
@@ -72,6 +72,8 @@ class ViewController: UIViewController {
 
 
     func loginToFireBase(credential: FIRAuthCredential) {
+
+
         FIRAuth.auth()?.signIn(with: credential) { (user, error) in
 
             if let error = error {
@@ -81,7 +83,10 @@ class ViewController: UIViewController {
                 print("user: \(user)")
                 Session.instance.user = user
 
-                // TODO: go to next view?? idk 
+
+                // TODO: go to next view?? idk
+
+
 
             }
         }
