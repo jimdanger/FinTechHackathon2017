@@ -12,8 +12,9 @@ import FirebaseAuthUI
 import FBSDKCoreKit
 import FBSDKLoginKit
 import FirebaseFacebookAuthUI
+import RxSwift
 
-class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
+class ViewController: UIViewController {
 
     let objcCode = CustomObject() 
 
@@ -23,26 +24,17 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
         print("viewDidLoad")
         
         CardIOUtilities.preload()
+        RestApiManager.instance.microsoftCreatePerson()
+        
+
+
+
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-
-    @IBAction func cardIOScanner(_ sender: Any) {
-        let cardIOVC = CardIOPaymentViewController(paymentDelegate: self)
-        cardIOVC?.modalPresentationStyle = .formSheet
-        present(cardIOVC!, animated: true, completion: nil)
-    }
-    
-    func userDidCancel(_ paymentViewController: CardIOPaymentViewController!) {
-        paymentViewController.dismiss(animated: true, completion: nil)
-    }
-    
-    func userDidProvide(_ cardInfo: CardIOCreditCardInfo!, in paymentViewController: CardIOPaymentViewController!) {
-
     }
 
 
@@ -80,10 +72,6 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
 
                 self.loginToFireBase(credential: credential)
-
-                let userDetailsRequest = FBSDKGraphRequest(graphPath: "me", parameters:["fields":"id,email,picture.width(200).height(200),name,first_name,last_name,gender,age_range,location,friends","return_ssl_resources":1] )
-
-                //self.firebaseLogin(credential)
             }
         })
     }
@@ -100,12 +88,14 @@ class ViewController: UIViewController, CardIOPaymentViewControllerDelegate {
                 Session.instance.user = user
 
 
-                // TODO: go to next view?? idk
-
-
+                self.performSegue(withIdentifier: "next", sender: self)
 
             }
         }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // do nothing 
     }
 
 }

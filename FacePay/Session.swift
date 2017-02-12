@@ -16,6 +16,8 @@ public class Session {
     open static var instance: Session  = Session()
     
     var user: FIRUser? // Firebase user
+    var personIdFromMicrosoft: String?
 
 
+    
 }
